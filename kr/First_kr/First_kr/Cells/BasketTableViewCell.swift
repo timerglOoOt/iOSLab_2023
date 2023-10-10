@@ -3,6 +3,7 @@ import UIKit
 class BasketTableViewCell: UITableViewCell {
     private lazy var carModelNameLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         return label

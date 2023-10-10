@@ -15,7 +15,7 @@ class BasketListView: UIView {
         table.delegate = self
         table.dataSource = self
         table.separatorStyle = .none
-        table.register(CarTableViewCell.self, forCellReuseIdentifier: "CarTableViewCell")
+        table.register(BasketTableViewCell.self, forCellReuseIdentifier: "BasketTableViewCell")
         table.rowHeight = 90
         table.translatesAutoresizingMaskIntoConstraints = false
         return table
@@ -46,7 +46,7 @@ extension BasketListView {
         addSubview(carsTableView)
         
         NSLayoutConstraint.activate([
-            catalogNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 60),
+            catalogNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 100),
             catalogNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             
             carsTableView.topAnchor.constraint(equalTo: catalogNameLabel.bottomAnchor, constant: 20),

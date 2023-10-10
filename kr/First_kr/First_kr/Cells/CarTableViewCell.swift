@@ -7,6 +7,7 @@ class CarTableViewCell: UITableViewCell {
     
     private lazy var carModelNameLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
         return label
@@ -64,7 +65,6 @@ extension CarTableViewCell {
         if !(dataService.basket.contains { $0.modelName == car.modelName}) {
             dataService.addToBasket(car: car)
         }
-        print(dataService.basket)
     }
     
     /// configure car cell with entering data
